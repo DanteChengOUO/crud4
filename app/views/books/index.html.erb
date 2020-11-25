@@ -1,0 +1,16 @@
+<h1>首頁</h1>
+<br>
+<%= link_to '新增書籍' , new_book_path %>
+<br>
+<ul>
+<% @books.each do |book| %>
+<br>
+<li>
+<%= link_to '編輯' , edit_book_path(book.id) %>
+<%= link_to '刪除' , book_path(book.id),
+                    method: :delete,
+                    data: {confirm: '你確定喔?'} %>
+<%= link_to book_path , books_path(book.id) %>
+</li>
+<% end %>
+</ul>
