@@ -10,7 +10,7 @@
 <%= link_to '刪除' , book_path(book.id),
                     method: :delete,
                     data: {confirm: '你確定喔?'} %>
-<%= link_to book_path , books_path(book.id) %>
+<%= link_to book.name , book_path(book.id) %>
 </li>
 <% end %>
 </ul>

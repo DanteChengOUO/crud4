@@ -2,14 +2,14 @@
 
 <% if @book.errors.any? %>
 <ul>
-<% @book.erroes.full_messages.each do |message| %>
+<% @book.errors.full_messages.each do |message| %>
 <li><%= message %></li>
 <% end %>
 </ul>
 <% end %>
 
 
-<% form_for(@book) do |f| %>
+<%= form_for(@book) do |f| %>
 <%= f.label '書籍名稱'%>
 <%= f.text_field :name %>
 <br>
